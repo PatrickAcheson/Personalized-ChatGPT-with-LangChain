@@ -27,10 +27,10 @@ def query():
 
 @app.route('/append', methods=['POST'])
 def append_data():
-    data = request.form['data']
+    data_to_append = request.form['data']
     with open('data.txt', 'a') as f:
-        f.write('\n' + data)
-    return jsonify({'status': 'success'})
+        f.write("\n" + data_to_append)
+    return {"success": True}, 200
 
 if __name__ == "__main__":
     app.run(debug=True)
