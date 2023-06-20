@@ -91,7 +91,4 @@ atlas@sandworm:~/.config/httpie/sessions/localhost_5000$
 
 
 python2 -c 'import pty; pty.spawn("/bin/sh")'
-
-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
 my dog is called bob
-my password for Netflix is Harrison1234
