@@ -14,6 +14,7 @@ Prerequisites:
 - A valid OpenAI API key
 - A Conda environment (recommended for ease of setup)
 - Visual Studio Build Tools (if needed)
+- data.txt needs atleast some data in it or error
 
 **IMPORTANT**: Please append only the data you are comfortable sharing with OpenAI, in accordance with their [data usage policy](https://openai.com/policies/api-data-usage-policies).
 
