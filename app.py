@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 import os
 import json
+from datetime import datetime
 
 import constants
 from langchain.document_loaders import DirectoryLoader, TextLoader
@@ -28,10 +29,14 @@ def query():
 
 @app.route('/append', methods=['POST'])
 def append_data():
+    name = " wrote by Patrick"
     data = json.loads(request.data)
     data_to_append = data['data']
+    current_time = datetime.now()
+    str_date_time = current_time.strftime("%d-%m-%Y, %H:%M:%S")
+
     with open('data.txt', 'a') as f:
-        f.write("\n" + data_to_append)
+        f.write(f"\n {data_to_append} {str_date_time} {name}")
     global index
     index = VectorstoreIndexCreator().from_loaders([loader])
     return {"success": True}, 200
