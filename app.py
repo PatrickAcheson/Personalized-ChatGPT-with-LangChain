@@ -13,6 +13,7 @@ os.environ["OPENAI_API_KEY"] = constants.APIKEY
 
 app = Flask(__name__)
 
+#loader = DirectoryLoader(".", glob="*.txt")
 loader = TextLoader('data.txt')
 index = VectorstoreIndexCreator().from_loaders([loader])
 
