@@ -1,1 +1,1 @@
-APIKEY = "key"
+APIKEY = "your-key"
