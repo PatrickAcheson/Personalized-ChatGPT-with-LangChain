@@ -1,9 +1,4 @@
-:root {
-    font-family: 'Space Mono', monospace;
-}
-
 body {
-    background-color: #fafafa;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -19,8 +14,6 @@ body {
     width: 80%;
     max-width: 600px;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #f0f0f0;
     padding: 20px;
 }
 
@@ -33,13 +26,12 @@ h1 {
     height: 300px;
     width: 100%;
     overflow-y: auto;
-    border: 1px solid #e0e0e0;
     padding: 20px;
     margin: 10px 0;
 }
 
 #chatbox p {
-    text-align: left;
+    width: 100%;
 }
 
 form {
@@ -63,7 +55,7 @@ textarea {
 button {
     padding: 10px 20px;
     border: none;
-    background-color: #007bff;
+    background-color: #3d89db;
     color: #ffffff;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -72,5 +64,19 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #4988cc;
+}
+
+/* https://css-tricks.com/snippets/css/typewriter-effect/ */
+.typewriter-text {
+    border-right: .15em solid orange;
+    margin: 0 auto;
+    white-space: pre-wrap;  /* This will make the text wrap */
+    overflow: hidden;
+    animation: typing 2s steps(4, end);
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
 }

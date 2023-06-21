@@ -21,6 +21,20 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+        var speed = 15;  /* The speed/duration of the effect in milliseconds */
+    
+        function typeWriter(txt, element) {
+            var i = 0;
+            function type() {
+                if (i < txt.length) {
+                    element.innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+    
         $('#submit').click(function () {
             var queryText = $('#query').val();
             $('#chatbox').append('<p><strong>You:</strong> ' + queryText + '</p>');
@@ -30,7 +44,11 @@
                 data: JSON.stringify({ 'query': queryText }),
                 type: 'POST',
                 success: function (response) {
-                    $('#chatbox').append('<p><strong>Bot:</strong> ' + response.result + '</p>');
+                    var responseElement = document.createElement('p');
+                    responseElement.className = 'typewriter-text';
+                    responseElement.innerHTML = '<strong>Bot:</strong> ';
+                    $('#chatbox').append(responseElement);
+                    typeWriter(response.result, responseElement);
                     $('#query').val('');
                 },
                 error: function (error) {
@@ -38,7 +56,7 @@
                 }
             });
         });
-
+    
         $('#append').click(function () {
             var appendDataText = $('#appendData').val();
             $.ajax({
@@ -55,6 +73,7 @@
             });
         });
     </script>
+    
 
 </body>
 

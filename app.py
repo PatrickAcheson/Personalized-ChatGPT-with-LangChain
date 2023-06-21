@@ -24,22 +24,23 @@ def home():
 def query():
     data = json.loads(request.data)
     query = data['query']
+    # remove llm for query on data.txt only
     result = index.query(query, llm=ChatOpenAI())
     return jsonify({'result': str(result)})
 
 @app.route('/append', methods=['POST'])
 def append_data():
-    name = " wrote by Patrick"
+    name = "Patrick"
     data = json.loads(request.data)
     data_to_append = data['data']
     current_time = datetime.now()
     str_date_time = current_time.strftime("%d-%m-%Y, %H:%M:%S")
 
     with open('data.txt', 'a') as f:
-        f.write(f"\n {data_to_append} {str_date_time} {name}")
+        f.write(f"\n {data_to_append} Current date of input:{str_date_time} Written by {name}")
     global index
     index = VectorstoreIndexCreator().from_loaders([loader])
     return {"success": True}, 200
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
