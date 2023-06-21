@@ -30,3 +30,6 @@ Prerequisites:
 
 Your contributions are welcome! If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a PR.
 
+## Screenshot
+
+![image](https://github.com/PatrickAcheson/organise-me/assets/90014630/a83c2118-abba-47af-8ef1-c73bb0907179)
