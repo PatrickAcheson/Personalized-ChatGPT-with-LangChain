@@ -33,4 +33,5 @@ Your contributions are welcome! If you encounter any issues or have suggestions 
 
 ## Screenshot
 
-![image](https://github.com/PatrickAcheson/organise-me/assets/90014630/a83c2118-abba-47af-8ef1-c73bb0907179)
+
+![image](https://github.com/PatrickAcheson/Personalized-ChatGPT-with-LangChain/assets/90014630/ae710b55-2975-401b-bad4-1f809bf68ecf)
