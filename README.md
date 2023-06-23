@@ -1,6 +1,6 @@
 # GPT-SELF
 
-I've created a quick spin up of a web-based chat application I am calling GPT-SELF, that leverages the capabilities of OpenAI's GPT-3.5 Turbo model using LangChain. This application allows you to engage in interactive dialogues and gives you the flexibility to append custom data to (`data.txt`), thus creating a personalized dataset for the AI.
+I've created a quick spin up of a web-based chat application I am calling GPT-SELF, that leverages the capabilities of OpenAI's GPT-3.5 Turbo model using LangChain. This application allows you to engage in interactive dialogues and gives you the flexibility to append custom data to (`data.txt`), thus creating a personalized dataset for the llm.
 
 The line `result = index.query(query, llm=ChatOpenAI())` uses a split band functionality, querying based on both your `data.txt` file and OpenAI's general dataset. Directory loading can be achived by uncommenting this command `loader = DirectoryLoader(".", glob="*.txt")` if an more expansive dataset needs to be read.
 
