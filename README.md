@@ -20,7 +20,7 @@ Prerequisites:
 
 ## Getting Started
 
-1. Clone this repo: `git clone https://github.com/PatrickAcheson/organise-me](https://github.com/PatrickAcheson/Personalized-ChatGPT-with-LangChain`
+1. Clone this repo: `git clone https://github.com/PatrickAcheson/Personalized-ChatGPT-with-LangChain`
 2. Install Python (tested on 3.9.13) conda and, if needed, Visual Studio Build Tools.
 3. Install the required packages using: `pip install -r requirements.txt`
 4. Set your OpenAI API Key in `constants.py`
